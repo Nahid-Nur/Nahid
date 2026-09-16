@@ -8,8 +8,8 @@ interface AdminLoginProps {
 }
 
 export const AdminLogin: React.FC<AdminLoginProps> = ({ onLoginSuccess, onBackToHome }) => {
-  const [email, setEmail] = useState('nahidnur28112004@gmail.com');
-  const [password, setPassword] = useState('28112004');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
@@ -28,7 +28,7 @@ export const AdminLogin: React.FC<AdminLoginProps> = ({ onLoginSuccess, onBackTo
       } else {
         // Fallback demo admin authentication check
         if (email !== 'nahidnur28112004@gmail.com' || password !== '28112004') {
-          throw new Error('ভুল ইমেইল বা পাসওয়ার্ড! (অ্যাডমিন: nahidnur28112004@gmail.com / 28112004)');
+          throw new Error('ভুল ইমেইল বা পাসওয়ার্ড!');
         }
       }
 
@@ -73,11 +73,6 @@ export const AdminLogin: React.FC<AdminLoginProps> = ({ onLoginSuccess, onBackTo
               <span>{error}</span>
             </div>
           )}
-
-          <div className="mb-6 p-3 bg-emerald-900/30 border border-emerald-700/50 rounded-xl text-emerald-300 text-xs flex items-center space-x-2">
-            <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
-            <span>অ্যাডমিন লগইন: nahidnur28112004@gmail.com / 28112004</span>
-          </div>
 
           <form className="space-y-6" onSubmit={handleLogin}>
             <div>
