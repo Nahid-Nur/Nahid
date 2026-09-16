@@ -1,0 +1,7 @@
+{
+  "name": "Allbookpdf - Bengali Ebook & PDF Library",
+  "description": "Discover, read online, and download Bengali ebooks, novels, poetry, history, and educational books for free.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
